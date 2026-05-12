@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes🔗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-card">
+            <h1>Notes🔗</h1>
+            <div class="form-container">
+                <input type="hidden" id="noteId">
+                <input type="text" id="title" placeholder="Judul Catatan...">
+                <textarea id="content" placeholder="Isi catatan..."></textarea>
+                <div style="display: flex; gap: 10px;">
+                    <button id="saveBtn" class="btn-mulai">Simpan Catatan</button>
+                    <button onclick="clearForm()" style="background: #6c757d; color: white; border: none; border-radius: 8px; padding: 0 20px; cursor: pointer;">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Cari ID..." onkeyup="searchNote()">
+            </div>
+        </div>
+
+        <div id="notesList" class="notes-grid"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

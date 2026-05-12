@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-light: #f8f9fa;
+    --card-white: #ffffff;
+    --text-dark: #212529;
+    --accent-gray: #6c757d;
+    --border-color: #dee2e6;
+    --black: #000000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    background-image: url('image/lucu.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+}
+
+.main-card {
+    background-color: var(--card-white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-bottom: 30px;
+    border: none;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.main-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: var(--black);
+    font-size: 2.2rem;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #fafafa;
+    transition: border 0.3s ease;
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: -15px 0 25px 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #e9ecef;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    width: fit-content;
+}
+
+.search-box span {
+    font-size: 0.9rem;
+    margin-right: 8px;
+    color: var(--accent-gray);
+}
+
+#searchInput {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    width: 100px;
+    transition: width 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    width: 180px;
+}
+
+.btn-mulai {
+    flex: 1;
+    height: 3.2rem;
+    background-color: var(--black) !important;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-mulai:hover {
+    background-color: #333 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.note-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.note-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.75rem;
+    color: var(--accent-gray);
+}
+
+.note-id {
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.note-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.note-item h3 { margin: 0 0 10px; color: var(--black); font-weight: 600; }
+.note-item p { color: var(--accent-gray); font-size: 0.9rem; }

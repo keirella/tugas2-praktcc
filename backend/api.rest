@@ -1,0 +1,32 @@
+### Variabel Global
+@host = http://localhost:3000
+
+### 1. Ambil Semua Catatan (GET)
+# Mengetes noteController.getAllNotes
+GET {{host}}/notes
+Accept: application/json
+
+### 2. Tambah Catatan Baru (POST)
+# Mengetes noteController.createNote
+POST {{host}}/notes
+Content-Type: application/json
+
+{
+    "judul": "Tugas Cloud Computing ☁️",
+    "isi": "Berhasil yattaa!"
+}
+
+### 3. Update Catatan Berdasarkan ID (PUT)
+# Mengetes noteController.updateNote
+PUT {{host}}/notes/3
+Content-Type: application/json
+
+{
+    "judul": "Tugas Updated",
+    "isi": "Diperbarui loh"
+}
+
+### 4. Hapus Catatan Berdasarkan ID (DELETE)
+# Mengetes noteController.deleteNote
+DELETE {{host}}/notes/3
+Accept: application/json

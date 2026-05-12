@@ -1,0 +1,14 @@
+runtime: nodejs20 
+instance_class: F1
+
+handlers:
+  - url: /image
+    static_dir: image
+
+  - url: /(.*\.(css|js))$
+    static_files: \1
+    upload: .*\.(css|js)$
+
+  - url: /.*
+    static_files: index.html
+    upload: index.html
